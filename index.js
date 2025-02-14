@@ -22,7 +22,7 @@ app.use("/",(req,res)=>{
 })
 
 
-app.use("*",(req,res,next)=>{
+app.get("*",(req,res,next)=>{
 next(new Error("route not found"),)
 })
 
