@@ -3,5 +3,6 @@ export function catchError(fn) {
         fn(req, res, next).catch((err) => {
             next(err)
         });
+    
     };
 }
