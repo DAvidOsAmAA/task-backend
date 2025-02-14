@@ -16,6 +16,12 @@ app.use(express.json())
 app.use("/task",taskRouter)
 
 
+
+app.use("/",(req,res)=>{
+    res.json({message:"hello from task api"})
+})
+
+
 app.use("*",(req,res,next)=>{
 next(new Error("route not found"),)
 })
